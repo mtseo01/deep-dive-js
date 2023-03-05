@@ -6,3 +6,8 @@
 ### 8장
 
 [제어문](https://github.com/mtseo01/deep-dive-js/blob/main/chapter-8/control-flow-statement.js)
+
+### 9장
+
+[9장](https://github.com/mtseo01/deep-dive-js/blob/main/chapter-9)
+[9.2 암묵적 타입 변환](https://github.com/mtseo01/deep-dive-js/blob/main/chapter-9/implicit-coercion.js)
