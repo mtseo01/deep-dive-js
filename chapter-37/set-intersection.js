@@ -16,3 +16,11 @@ console.log(setA.intersection(setB)); // Set(2) { 2, 4 }
 
 // setB와 setA의 교집합
 console.log(setB.intersection(setA)); // Set(2) { 2, 4 }
+
+// 다른 방법
+
+Set.prototype.intersection2 = function (set) {
+  return new Set([...this].filter((v) => set.has(v)));
+};
+
+console.log(setA.intersection2(setB)); // Set(2) { 2, 4 }
