@@ -22,3 +22,15 @@ fetchBtn2.addEventListener('click', async () => {
     console.log(error);
   }
 });
+
+// query params 사용법
+
+// axios 방법. 간단하다..
+const axiosParams = async () => {
+  try {
+    const res = await axios.get(url, { params: { ID: 'test1', NUMBER: 3 } });
+    console.log(res);
+  } catch (error) {
+    console.log(error);
+  }
+};
