@@ -34,3 +34,23 @@ const axiosParams = async () => {
     console.log(error);
   }
 };
+
+// fetch 방법. 복잡하다..
+let params = {
+  param1: 'value1',
+  param2: 'value2',
+};
+
+let query = Object.keys(params)
+  .map((k) => encodeURIComponent(k) + '=' + encodeURIComponent(params[k]))
+  .join('&');
+
+let url = 'https://example.com/search?' + query;
+
+try {
+  const res2 = await fetch(url);
+  const data = await res2.json();
+  console.log(data);
+} catch (error) {
+  console.log(error);
+}
