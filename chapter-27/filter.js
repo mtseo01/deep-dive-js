@@ -15,3 +15,29 @@ item : 1, index : 0, this : [1,2,3]
 item : 2, index : 1, this : [1,2,3]
 item : 3, index : 2, this : [1,2,3]
 */
+
+class Users {
+  constructor() {
+    this.users = [
+      { id: 1, name: 'Lee' },
+      { id: 2, name: 'Kim' },
+    ];
+  }
+  findById(id) {
+    return this.users.filter((user) => user.id === id);
+  }
+
+  remove(id) {
+    this.users = this.users.filter((user) => user.id !== id);
+  }
+}
+
+const users = new Users();
+
+let user = users.findById(1);
+console.log(user); // [ { id: 1, name: 'Lee' } ]
+
+users.remove(2);
+
+user = users.findById(2);
+console.log(user); // []
