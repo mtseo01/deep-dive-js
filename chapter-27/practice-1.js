@@ -18,7 +18,7 @@ const dummyArr2 = [
   '####코딩구',
 ];
 
-const unitedArr2 = dummyArr.map((keyword) => {
+const unitedArr2 = dummyArr2.map((keyword) => {
   let modifiedKeyword = keyword;
   while (modifiedKeyword.startsWith('#')) {
     modifiedKeyword = modifiedKeyword.slice(1);
@@ -27,3 +27,18 @@ const unitedArr2 = dummyArr.map((keyword) => {
 });
 
 console.log(unitedArr2); // [ '#테스트', '#태그입니다', '#공부', '#공스타', '#코딩구' ]
+
+const dummyArr3 = [
+  '테스트',
+  '##태그입니다',
+  '##공부',
+  '###공스타',
+  '####코딩구',
+];
+
+const unitedArr3 = dummyArr3.map((keyword) => {
+  const modifiedKeyword = `#${keyword.replace(/^#+/, '')}`;
+  return modifiedKeyword;
+});
+
+console.log(unitedArr3);
