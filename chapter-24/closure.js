@@ -14,3 +14,17 @@ function bar() {
 }
 
 foo(); // 1
+bar(); // 1
+
+const y = 1;
+
+function outer() {
+  const y = 10;
+  const inner = function () {
+    console.log(y);
+  };
+  return inner;
+}
+
+const innerFunc = outer();
+innerFunc();
